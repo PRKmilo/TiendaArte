@@ -1,0 +1,44 @@
+:root{
+    --blanco: #FFFFFF;
+     --negro: #000000;
+  --amarillo: #FFC107;
+      --azul: #0097A7;
+      --gris: #757575;
+      --verde: #65FF33 ;
+
+      --fuente-principal: 3.8rem;
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+font-size: 16px; /* 1rem= 10px*/
+font-family: 'Krub', sans-serif;
+}
+.titulo span{
+    text-align: center;
+    font-size: 3.8rem;
+    color: #000000;
+   
+}
+
+
+.titulo  { 
+    text-align: center;
+    font-size: 3.8rem;
+    color:#65FF33;
+
+
+}
+
+.titulo pan  { 
+    text-align: center;
+    font-size: 3.8rem;
+    color:#65FF33;
+}
+
+nav{
+    text-align: center; 
+    
+}
