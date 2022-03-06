@@ -1,3 +1,63 @@
 body{ 
-    background-color: black;
+     
+    margin: 0;
+    padding: 0;
+    background: url(/img/van.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
 }
+.loginc{
+  width: 320px; 
+  height: 420px ;
+  background-color: black;
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+
+}
+
+.loginc .f {
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    position: absolute;
+    top: -20%;
+    left: calc(50% - 20%);
+}
+
+.loginc h2{ 
+    margin: 0%;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+
+
+}
+
+.loginc label { 
+    margin: 0%;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+
+
+}
+
+.loginc input{
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.loginc input [type="text"] 
+.loginc input [type="password"]{
+    
+
+}
+
+
