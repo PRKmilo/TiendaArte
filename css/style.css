@@ -18,6 +18,7 @@ header{
 body{
 font-size: 16px; /* 1rem= 10px*/
 font-family: 'Krub', sans-serif;
+background-color: aquamarine;
 
 }
 .titulo span{
@@ -45,4 +46,8 @@ font-family: 'Krub', sans-serif;
 nav{
     text-align: center; 
     
+}
+img{
+    width: 350px;
+    height: 300px;
 }
