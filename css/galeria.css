@@ -23,3 +23,10 @@ div.bie{
     text-shadow: 2xp 2xp 5xp purple;
     padding: 10px;;
 }
+
+#areaContador {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: impact;
+    margin: 10px;
+}
