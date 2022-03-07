@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      
+        <title>Galeria de arte</title>
+            <!--incluir CSS-->
+        <link rel="stylesheet" href="css/galeria.css">
+        <script src="js/logica.js" ></script>
+
+    </head>
+    <body>
+
+        
+        <h2>Galeria de imagenes</h2>
+        <h2>Artista </h2>
+        
+        <div class="Galeria">
+            <div class="foto">
+                <img src="img/imgf1.jfif" alt="">
+            </div>
+    
+
+            <div class="pie">
+                <p>sala de exhibicion</p>
+                <p> "moderno"</p>
+                
+            </div>
+            <button id="boton1" class="contador">Me gusta</button>
+            <div id="num-likes-boton1"></div>
+        </div>
+        <div class="Galeria">
+            <div class="foto">
+                <img src="img/img2.jfif" alt="">
+            </div>
+    
+            <div class="pie">
+                <p>sala de exhibicion</p>
+                <p> "prehistorico"</p>
+
+            </div>
+            <button id="boton2" class="contador">Me gusta</button>
+            <div id="num-likes-boton2"></div>
+
+        </div>
+        <div class="Galeria">
+            <div class="foto">
+                <img src="img/img3.jfif" alt="">
+            </div>
+            <div class="pie">
+                <p>sala de exhibicion</p>
+                <p> "medieval"</p>
+
+
+            </div>
+            <button id="boton3" class="contador">Me gusta</button>
+            <div id="num-likes-boton3"></div>
+
+        </div>
+        <div class = "Galeria">
+            <div class="foto">
+                <img src="img/img4.jfif" alt="">
+            </div>
+            <div class="pie">
+                <p>sala de exhibicion</p>
+                <p> "renacentista"</p>
+
+            </div>
+            <button id="boton4" class="contador">Me gusta</button>
+            <div id="num-likes-boton4"></div>
+
+        </div>
+        
+    <script>
+        var likes = [];
+        let like;
+        document.querySelectorAll('.contador').forEach(item => {
+            if (!localStorage.likes) {
+                likes.push(
+                    {
+                        "id": item.id,
+                        "likes": 0
+                    }
+                );   
+            } else {
+                likes = JSON.parse (localStorage.likes);
+                like = likes.find(like => like.id == item.id);
+                document.getElementById("num-likes-" + item.id).innerHTML = like.likes;
+
+
+            }
+            item.addEventListener("click", function(event) {
+                //Inicializando a 0 todos los contadores
+                let id = event.srcElement.id;
+
+                // // Matching like with the id from the clicked button
+                like = likes.find(like => like.id == id);
+
+                // // Incrementing the num likes
+                like.likes++;
+
+                // // Updating the num likes cell
+                document.getElementById("num-likes-" + id).innerHTML = like.likes;
+
+                // // Updating the local storage
+                localStorage.setItem("likes", JSON.stringify(likes));
+            });
+        });
+        if (!localStorage.likes) {
+            localStorage.setItem("likes", JSON.stringify(likes));
+        }
+
+        
+    </script>
+    </body>
+</html>
