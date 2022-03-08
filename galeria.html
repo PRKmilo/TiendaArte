@@ -56,9 +56,9 @@
             <div id="num-likes-boton3"></div>
 
         </div>
-        <div class = "Galeria">
+        <div class = "Galeria" id="imagen1">
             <div class="foto">
-                <img src="img/img4.jfif" alt="">
+                <img   src="img/img4.jfif" alt="">
             </div>
             <div class="pie">
                 <p>sala de exhibicion</p>
@@ -69,7 +69,27 @@
             <div id="num-likes-boton4"></div>
 
         </div>
-        
+        <script>
+
+            const imagetable=document.getElementById("imagen1");
+            var imagenes;
+            if(!localStorage.imagenes){
+            var  imagenes=[
+                {"url":"https://previews.123rf.com/images/karakotsya/karakotsya1607/karakotsya160700046/59996379-original-abstract-digital-painting-of-human-eye-colorful-composition-in-contemporary-modern-art-perf.jpg"}
+                ,{"url":"https://i.pinimg.com/originals/1a/e2/85/1ae285d4e5d725d52948c2aa2706ef44.jpg"}
+            ]
+            localStorage.setItem("imagenes",JSON.stringify(imagenes));
+            }
+            else{
+                 imagenes=JSON.parse(localStorage.imagenes);   
+            }
+            
+            let newm=document.createElement("img");
+            newm.src=imagenes[0].url;
+            imagetable.appendChild(newm);
+            
+
+        </script>
     <script>
         var likes = [];
         let like;
