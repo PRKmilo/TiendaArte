@@ -12,6 +12,10 @@
 html{
     font-size: 62.5%;
 }
+
+table, th, td {
+    border: 1px solid;
+  }
 header{
     background-color: #000000;
 }
