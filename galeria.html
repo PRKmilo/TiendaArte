@@ -10,11 +10,12 @@
     </head>
     <body>
 
-        
+        <header>
         <h2>Galeria de imagenes</h2>
         <h2>Artista </h2>
+        </header>
         
-        <div class="Galeria">
+        <div class="Galeria" id="imagen3">
             <div class="foto">
                 <img src="img/imgf1.jfif" alt="">
             </div>
@@ -28,7 +29,7 @@
             <button id="boton1" class="contador">Me gusta</button>
             <div id="num-likes-boton1"></div>
         </div>
-        <div class="Galeria">
+        <div class="Galeria" >
             <div class="foto">
                 <img src="img/img2.jfif" alt="">
             </div>
@@ -42,7 +43,7 @@
             <div id="num-likes-boton2"></div>
 
         </div>
-        <div class="Galeria">
+        <div class="Galeria" id="imagen2">
             <div class="foto">
                 <img src="img/img3.jfif" alt="">
             </div>
@@ -72,11 +73,15 @@
         <script>
 
             const imagetable=document.getElementById("imagen1");
+            const imagettable=document.getElementById("imagen2");
+            const imagetres=document.getElementById("imagen3");
+         
             var imagenes;
             if(!localStorage.imagenes){
             var  imagenes=[
                 {"url":"https://previews.123rf.com/images/karakotsya/karakotsya1607/karakotsya160700046/59996379-original-abstract-digital-painting-of-human-eye-colorful-composition-in-contemporary-modern-art-perf.jpg"}
                 ,{"url":"https://i.pinimg.com/originals/1a/e2/85/1ae285d4e5d725d52948c2aa2706ef44.jpg"}
+              
             ]
             localStorage.setItem("imagenes",JSON.stringify(imagenes));
             }
@@ -85,8 +90,18 @@
             }
             
             let newm=document.createElement("img");
+            let new2=document.createElement("img");
+            let new3=document.createElement("img");
             newm.src=imagenes[0].url;
+            new2.src=imagenes[1].url;
+            
+          
+
             imagetable.appendChild(newm);
+            imagettable.appendChild(new2);
+            
+            
+
             
 
         </script>

@@ -5,7 +5,12 @@
 		},
 		{
 			"path": "..\\Nueva carpeta (4)"
+		},
+		{
+			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Tiendaart"
+	}
 }
